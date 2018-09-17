@@ -60,4 +60,18 @@ document.addEventListener('DOMContentLoaded', function () {
             container.children[i].style.backgroundColor = 'white'
         }
     })
+    function paint(){
+        for (let i = 0; i < boxes.length; i++) {
+            boxes[i].addEventListener('mouseover', function (event) {
+                event.target.style.backgroundColor = brush.style.backgroundColor
+            })
+        }
+    }
+    container.addEventListener("mousedown", paint)
+    
+    container.addEventListener("mouseup", function(){
+        for (let i = 0; i < boxes.length; i++) {
+            boxes[i].removeEventListener('mouseover', paint())
+        }
+    })
 });
