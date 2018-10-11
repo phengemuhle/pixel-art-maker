@@ -18,9 +18,9 @@ document.addEventListener('DOMContentLoaded', function () {
     var colorsplash = document.querySelector('.fillBox')
     var boxes = document.querySelectorAll('main')
     var clear = document.querySelector('.clear')
-   
 
-    color1.addEventListener("click", function(event){
+
+    color1.addEventListener("click", function (event) {
         brush.style.backgroundColor = "red"
     })
     color2.addEventListener("click", function (event) {
@@ -44,15 +44,19 @@ document.addEventListener('DOMContentLoaded', function () {
     color8.addEventListener("click", function (event) {
         brush.style.backgroundColor = "black"
     })
-    
+
     colorsplash.addEventListener("click", function (event) {
-        for (let i = 0; i < container.children.length; i++){
+        for (let i = 0; i < container.children.length; i++) {
             container.children[i].style.backgroundColor = brush.style.backgroundColor
         }
     })
     for (let i = 0; i < boxes.length; i++) {
         boxes[i].addEventListener('click', function (event) {
-            event.target.style.backgroundColor = brush.style.backgroundColor
+            if (event.target.style.backgroundColor === brush.style.backgroundColor) {
+                event.target.style.backgroundColor = 'white'
+            } else {
+                event.target.style.backgroundColor = brush.style.backgroundColor
+            }
         })
     }
     clear.addEventListener("click", function (event) {
@@ -60,18 +64,18 @@ document.addEventListener('DOMContentLoaded', function () {
             container.children[i].style.backgroundColor = 'white'
         }
     })
-    function paint(){
-        for (let i = 0; i < boxes.length; i++) {
-            boxes[i].addEventListener('mouseover', function (event) {
-                event.target.style.backgroundColor = brush.style.backgroundColor
-            })
-        }
-    }
-    container.addEventListener("mousedown", paint)
-    
-    container.addEventListener("mouseup", function(){
-        for (let i = 0; i < boxes.length; i++) {
-            boxes[i].removeEventListener('mouseover', paint())
-        }
-    })
+
+    // container.addEventListener("mousedown", paint)
+    // container.addEventListener("mouseup", function () {
+    //     for (let i = 0; i < boxes.length; i++) {
+    //         boxes[i].removeEventListener('mouseover', paint())
+    //     }
+    // })
+    // function paint() {
+    //     for (let i = 0; i < boxes.length; i++) {
+    //         boxes[i].addEventListener('mouseover', function (event) {
+    //             event.target.style.backgroundColor = brush.style.backgroundColor
+    //         })
+    //     }
+    // }
 });
