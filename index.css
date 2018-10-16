@@ -1,4 +1,4 @@
-.bodycont{
+.bodyCont{
     display: flex;
     justify-content: center;
     align-content: center;
@@ -8,7 +8,7 @@
     background-color: black;
     border: .5em solid pink;
 }
-.imgcont{
+.imgCont{
     height: auto;
     width: auto;
 }
@@ -37,20 +37,20 @@
     justify-content: center;
     align-content: center;
     flex-flow: row wrap;
-    width: 1510px;
+    width: 1300px;
     height: 627PX;
     background-color:gray;
-    padding:1em;
+    padding:10em;
     margin-left:43px;
    
         
 }
-.headtext{
+.headText{
     display: flex;
     justify-content: center;
     margin: auto;
 }
-.headerbox{
+.headerBox{
     height: 7em;
     width: 100%;
 }
@@ -81,28 +81,28 @@
     height:6.5em;
     border-radius: 50%;
 }
-.color1{
+.red{
     background-color: red;
 }
-.color2{
+.blue{
     background-color: blue;
 }
-.color3{
+.yellow{
     background-color: yellow;
 }
-.color4{
+.orange{
     background-color: orange;
 }
-.color5{
+.purple{
     background-color: purple;
 }
-.color6{
+.green{
     background-color: green;
 }
-.color7{
+.pink{
     background-color: pink;
 }
-.color8{
+.black{
     background-color: black;
 }
 .fillBox{
@@ -114,7 +114,7 @@
 .fillBoxColor{
     background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet)
 }
-.fillcolor{
+.fillColor{
     font-size: 1.5em;
     margin-bottom: .5em;
 }
